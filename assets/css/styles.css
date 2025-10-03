@@ -420,7 +420,7 @@ img {
 }
 
 
-
+/* Contact links: always side-by-side (no stacking) */
 
 /* Contact buttons: row on desktop, stack on mobile */
 .contact__links{
@@ -470,7 +470,7 @@ img {
 }
 .footer__social {
   margin-bottom: var(--mb-4);
-
+}
 .footer__icon {
   font-size: 1.5rem;
   color: var(--first-color-alt);
@@ -605,6 +605,8 @@ img {
   }
 }
 
+
+
 /* Language switch: consistent look on all screens */
 .lang-switch{
   display: flex;
@@ -645,6 +647,3 @@ img {
 
 /* Safety: ensure header sits above the slide menu on mobile */
 .l-header{ z-index: var(--z-fixed); }
-
-
-
