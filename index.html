@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Muhammet Paşaoğlu</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Muhammet Paşaoğlu</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link" data-i18n="nav.home">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link" data-i18n="nav.about">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link" data-i18n="nav.skills">Skills</a></li>
+                        <li class="nav__item"><a href="#publications" class="nav__link" data-i18n="nav.pubs">Publications</a></li>
+                        <li class="nav__item"><a href="#projects" class="nav__link" data-i18n="nav.project">Projects</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="lang-switch">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="tr">TR</button>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title"><span data-i18n="home.hello">Hello,</span><br>
+                <span data-i18n="home.ben">I'm </span><span class="home__title-color">Muhammet</span><br>
+                <span data-i18n="home.role1">Computer Engineer</span><br>
+                <span class="home__role" data-i18n="home.role2">AI &amp; Computer Vision Researcher</span>
+                </h1>
+                    </div>
+
+                <div class="home__social">
+                <!-- Email (first) -->
+                <a href="mailto:m.pasaoglu.acad@gmail.com" class="home__social-icon" aria-label="Email">
+                    <i class='bx bx-envelope'></i>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/muhammetpasaoglu" class="home__social-icon" aria-label="LinkedIn">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+
+                <!-- ORCID -->
+                <a href="https://orcid.org/0009-0008-0929-7740" class="home__social-icon" target="_blank" rel="noopener" aria-label="ORCID">
+                    <i class="fa-brands fa-orcid"></i>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/mpasaoglu1947" class="home__social-icon" aria-label="GitHub">
+                    <i class='bx bxl-github'></i>
+                </a>
+                </div>
+
+
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                        <!-- Circle clip (shows only a circle of the photo) -->
+                        <defs>
+                        <clipPath id="avatarClip" clipPathUnits="userSpaceOnUse">
+                            <circle cx="239.5" cy="233.5" r="170"></circle>
+                        </clipPath>
+                        </defs>
+
+                        <!-- Photo inside the circle -->
+                        <image
+                        clip-path="url(#avatarClip)"
+                        x="69.5" y="63.5" width="340" height="340"
+                        href="assets/img/perfil.jpeg" xlink:href="assets/img/perfil.jpeg"
+                        preserveAspectRatio="xMidYMid slice" />
+
+                        <!-- Optional: gold ring around the circle (remove if you don't want it) -->
+                        <circle cx="239.5" cy="233.5" r="173" fill="none"
+                                stroke="var(--first-color)" stroke-width="6"/>
+                    </svg>
+                    </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title" data-i18n="section.about">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/about.jpeg" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I'am Muhammet</h2>
+                        <p class="about__text" data-i18n="about.text">I am Muhammet Paşaoğlu, a researcher in Computer Engineering specializing in computer vision, deep learning, and artificial intelligence. My academic journey bridges theory and application, with a strong focus on stylization, face recognition, and generative AI.</p>           
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title" data-i18n="section.skills">Skills</h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle" data-i18n="skills.subtitle">Research & Technical Skills</h2>
+                        <p class="skills__text" data-i18n="skills.text">
+                        I work across computer vision, artificial intelligence, and deep learning. My core strengths include building and evaluating recognition systems, developing generative models, and applying game theory to machine learning.
+                        </p>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-python skills__icon'></i>
+                                <span class="skills__name">Python</span>
+                            </div>
+                            <div class="skills__bar skills__html">
+
+                            </div>
+                            <div>
+                                <span class="skills__percentage">95%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bx-brain skills__icon'></i>
+                                <span class="skills__name">Deep Learning (PyTorch, TensorFlow)</span>
+                            </div>
+                            <div class="skills__bar skills__css">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">90%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                  <i class='bx bx-image-alt skills__icon'></i>
+                                <span class="skills__name">Computer Vision & Image Processing</span>
+                            </div>
+                            <div class="skills__bar skills__js">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">94%</span>
+                            </div>
+                        </div>
+
+                        <!-- Edge Detection -->
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bx-vector skills__icon'></i>
+                                <span class="skills__name">Edge Detection & Image Segmentation</span>
+                            </div>
+                            <div class="skills__bar skills__js"></div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                        <!-- MiDaS Depth Estimation -->
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bx-cube-alt skills__icon'></i>
+                                <span class="skills__name">Depth Estimation (MiDaS, DPT Models)</span>
+                            </div>
+                            <div class="skills__bar skills__js"></div>
+                            <div>
+                                <span class="skills__percentage">80%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bx-shape-circle skills__icon'></i>
+                                <span class="skills__name">Generative Models (GANs, Diffusion)</span>
+                            </div>
+                            <div class="skills__bar skills__ux">
+                                
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                            
+                        </div>
+
+                        <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bx-line-chart skills__icon'></i>
+                            <span class="skills__name">Data Analysis & Research Writing</span>
+                        </div>
+                        <div class="skills__bar skills__ux"></div>
+                        <div><span class="skills__percentage">90%</span></div>
+                    </div>
+                    </div>
+                    
+                    <div>              
+                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                    </div>
+                </div>
+            </section>
+
+
+                <!--===== PUBLICATIONS =====-->
+                <section class="section" id="publications">
+                <h2 class="section-title" data-i18n="section.pubs">Publications</h2>
+
+                <div class="pub__list bd-grid">
+                    <!-- Item 1 -->
+                    <article class="pub__item">
+                    <h3 class="pub__title">
+                        Investigating the Effectiveness of Stylization on the Performance of Deep Face Recognition Systems
+                    </h3>
+                    <p class="pub__authors">
+                        <strong>M. Paşaoğlu</strong>, E. Arıcan
+                    </p>
+                    <p class="pub__venue">
+                        <span class="pub__badge" data-i18n="pubs.under_review">Under Review</span> • Gazi University Journal of Science, 2025
+                    </p>
+                    <p class="pub__meta">
+                        Stylization, robustness, face recognition, partial stylization.
+                    </p>
+                    <div class="pub__links">
+                        <!-- <a href="#" target="_blank"><i class='bx bx-book-open'></i> DOI</a>
+                        <a href="#" target="_blank"><i class='bx bxl-google'></i> Scholar</a>
+                        <a href="#" target="_blank"><i class='bx bx-copy'></i> BibTeX</a> -->
+                    </div>
+                    </article>
+
+                    <!-- Item 2 -->
+                    <article class="pub__item">
+                    <h3 class="pub__title">
+                        A Hybrid Conditional GAN Design for Image-to-Image Translation Integrating UNet and ResNet
+                    </h3>
+                    <p class="pub__authors">
+                        <strong>K. Alhariri</strong>, M. Paşaoğlu, E. Arıcan
+                    </p>
+                    <p class="pub__venue">
+                        <span class="pub__badge pub__badge--accepted" data-i18n="pubs.accepted">Accepted</span><span class="pub__badge pub__badge--preprint" data-i18n="pubs.inpub">In Publications Phase</span> • Firat University Journal of Experimental and Computational Engineering, 2025
+                    </p>
+                    <div class="pub__links">
+                        <!-- <a href="#" target="_blank"><i class='bx bx-book-open'></i> DOI</a>
+                        <a href="#" target="_blank"><i class='bx bxl-google'></i> Scholar</a>
+                        <a href="#" target="_blank"><i class='bx bx-copy'></i> BibTeX</a>                    </div> -->
+                    </article>
+
+                    <!-- Item 3 -->
+                    <article class="pub__item">
+                    <h3 class="pub__title">
+                        Optimizing Recommendation Systems By Fusion of KNN, Singular Value Decomposition, and XGBoost for Enhanced Performance
+                    </h3>
+                    <p class="pub__authors">
+                        <strong>M. Paşaoğlu</strong>, E. Arıcan
+                    </p>
+                    <p class="pub__venue">
+                        <span class="pub__badge pub__badge--conf"  data-i18n="pubs.conf">Conference</span> • 2024 9th International Conference on Computer Science and Engineering (UBMK)
+                    </p>
+                    <div class="pub__links">
+                        <a href="https://ieeexplore.ieee.org/document/10773499/" target="_blank"><i class='bx bx-book-open'></i> DOI</a>
+                        <a href="#" target="_blank"><i class='bx bxl-google'></i> Scholar</a>
+                        <a href="assets/bib/pub1.bib" target="_blank"><i class='bx bx-copy'></i> BibTeX</a>                    </div>
+                    </article>
+                </div>
+                </section>
+
+
+
+                <section class="work section" id="projects">
+                <h2 class="section-title" data-i18n="section.projects">Projects</h2>
+
+                <div class="work__container bd-grid">
+                    
+                    <!-- Project 1 -->
+                    <div class="work__img">
+                    <img src="assets/img/work-stylization.webp" alt="Stylization & Face Recognition">
+                    <div class="work__overlay">
+                        <h3 class="work__title" data-i18n="work.styl.title">Stylization & Face Recognition</h3>
+                        <p class="work__desc" data-i18n="work.styl.desc">
+      Introduced <strong>Automatic Partial Stylization (APS)</strong>—selectively stylizes regions to test robustness, showing even partial stylization can fool SOTA face networks.
+    </p>
+  </div>
+                    </div>
+
+
+
+                    <!-- Project 3 -->
+                    <div class="work__img">
+                    <img src="assets/img/work-edges.webp" alt="Edge Detection">
+                    <div class="work__overlay">
+                        <h3 class="work__title" data-i18n="work.edges.title">Semi-Supervised Edge Optimizer</h3>
+                        <p class="work__desc" data-i18n="work.edges.desc">Fusing RGB & depth cues to to generate a Semi-Supervised edge detection modular.</p>
+                    </div>
+                    </div>
+
+
+                    <!-- Project 5 -->
+                    <div class="work__img">
+                    <img src="assets/img/work-recsys.webp" alt="Recommendation Systems">
+                    <div class="work__overlay">
+                        <h3 class="work__title" data-i18n="work.recsys.title">Optimizing Recommendation Systems</h3>
+                        <p class="work__desc" data-i18n="work.recsys.desc" >Fusion of KNN, SVD, and XGBoost for enhanced recommendation performance.</p>
+                    </div>
+                    </div>
+
+                  <!-- Project 2
+                    <div class="work__img">
+                    <img src="assets/img/work-midas.webp" alt="Depth-based Panorama">
+                    <div class="work__overlay">
+                        <h3 class="work__title" data-i18n="work.midas.title">Panoramic Image Stitching</h3>
+                        <p class="work__desc" data-i18n="work.midas.desc">Using MiDaS depth maps to build seamless panoramic reconstructions Model.</p>
+                    </div>
+                    </div> -->
+
+                    <!-- Project 6 -->
+                    <div class="work__img">
+                    <img src="assets/img/work-hairless.webp" alt="Hairless: Hair Artifact Removal">
+                    <div class="work__overlay">
+                        <h3 class="work__title" data-i18n="work.hairless.title">Hairless Image Preprocessing for Accurate Skin Lesion Detection and Segmentation</h3>
+                        <p class="work__desc" data-i18n="work.hairless.desc">
+                        Preprocessing pipeline removing hair artifacts in dermoscopy to boost lesion segmentation & classification accuracy.
+                        </p>
+                    </div>
+                    </div>
+
+                    
+                    <!-- Project 4 -->
+                    <div class="work__img">
+                    <img src="assets/img/work-gan.webp" alt="GAN Translation">
+                    <div class="work__overlay">
+                        <h3 class="work__title" data-i18n="work.gan.title">Hybrid Conditional GAN</h3>
+                        <p class="work__desc" data-i18n="work.gan.desc">Combining U-Net and ResNet for robust image-to-image translation.</p>
+                    </div>
+                    </div>
+
+                    
+                </div>
+                </section>
+
+
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+            <h2 class="section-title" data-i18n="section.contact">Contact</h2>
+
+            <div class="contact__container bd-grid">
+                <div class="contact__links">
+
+                <!-- Email -->
+                <a class="button contact__btn"
+                    href="mailto:m.pasaoglu.acad@gmail.com"
+                    aria-label="Email">
+                    <i class='bx bx-envelope'></i>
+                    <span data-i18n="contact.email">Email</span>
+                </a>
+
+                <!-- LinkedIn -->
+                <a class="button contact__btn"
+                    href="https://www.linkedin.com/in/muhammetpasaoglu"
+                    target="_blank" rel="noopener"
+                    aria-label="LinkedIn">
+                    <i class='bx bxl-linkedin'></i>
+                    <span>LinkedIn</span>
+                </a>
+
+                <!-- ORCID -->
+                <a class="button contact__btn"
+                    href="https://orcid.org/0009-0008-0929-7740"
+                    target="_blank" rel="noopener"
+                    aria-label="ORCID">
+                    <i class="fa-brands fa-orcid"></i>
+                    <span>ORCID</span>
+                </a>
+
+                <!-- GitHub -->
+                <a class="button contact__btn"
+                    href="https://github.com/mpasaoglu1947"
+                    target="_blank" rel="noopener"
+                    aria-label="GitHub">
+                    <i class='bx bxl-github'></i>
+                    <span>GitHub</span>
+                </a>
+
+                </div>
+            </div>
+        </section>
+
+            <!--===== FOOTER =====-->
+            <footer class="footer">
+            <p class="footer__title">Muhammet Paşaoglu</p>
+
+            <div class="footer__social">
+                <!-- Email -->
+                <a href="mailto:m.pasaoglu.acad@gmail.com" class="footer__icon" aria-label="Email">
+                <i class='bx bx-envelope'></i>
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/muhammetpasaoglu" class="footer__icon" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class='bx bxl-linkedin'></i>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/mpasaoglu1947" class="footer__icon" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class='bx bxl-github'></i>
+                </a>
+                <!-- ORCID (uses Font Awesome) -->
+                <a href="https://orcid.org/0009-0008-0929-7740" class="footer__icon" target="_blank" rel="noopener" aria-label="ORCID">
+                <i class="fa-brands fa-orcid"></i>
+                </a>
+            </div>
+
+            <p class="footer__copy">
+                © <span id="year"></span> muhammetpasaoglu.
+                <span data-i18n="footer.rights">All rights reserved</span>
+                </p>
+            </footer>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+
+
+        <script src="assets/js/i18n.js" defer></script>
+
+
+
+    </body>
+</html>
