@@ -433,6 +433,30 @@ img {
   padding-bottom: .25rem;          /* room for scrollbar on some browsers */
 }
 
+/* Contact buttons: row on desktop, stack on mobile */
+.contact__links{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;         /* row by default on larger screens */
+}
+
+@media (max-width: 520px){
+  .contact__links{
+    flex-direction: column;  /* stack vertically */
+    align-items: stretch;    /* full-width buttons */
+    gap: .75rem;
+    overflow-x: visible;     /* undo any previous horizontal scroll */
+  }
+  .contact__btn{
+    width: 100%;             /* make buttons full width */
+    justify-content: center; /* center icon + label */
+    display: inline-flex;
+    min-height: 44px;        /* comfy tap target */
+  }
+}
+
 
 
 .contact .button:hover,
@@ -455,27 +479,9 @@ img {
   color: var(--first-color-alt);
   margin-bottom: var(--mb-4);
 }
-.footer__social{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: .8rem;
-}
+.footer__social {
+  margin-bottom: var(--mb-4);
 
-@media (max-width: 520px){
-  .footer__social{
-    flex-direction: column;   /* stack vertically */
-    align-items: center;
-    gap: .5rem;
-  }
-  .footer__social .footer__icon{
-    display: inline-flex;     /* nicer tap targets */
-    width: 44px;
-    height: 44px;
-    align-items: center;
-    justify-content: center;
-  }
-}
 .footer__icon {
   font-size: 1.5rem;
   color: var(--first-color-alt);
