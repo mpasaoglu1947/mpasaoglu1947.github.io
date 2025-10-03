@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mpasaoglu1947.github.io/mp.github.io/sitemap.xml
