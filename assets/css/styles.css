@@ -420,18 +420,7 @@ img {
 }
 
 
-/* Contact links: always side-by-side (no stacking) */
-.contact__links{
-  display: grid;
-  grid-auto-flow: column;          /* put items in columns horizontally */
-  grid-auto-columns: max-content;  /* size to content */
-  justify-content: center;         /* center the whole row */
-  align-items: center;
-  gap: 1rem;
-  overflow-x: auto;                /* allow horizontal scroll on small screens */
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: .25rem;          /* room for scrollbar on some browsers */
-}
+
 
 /* Contact buttons: row on desktop, stack on mobile */
 .contact__links{
