@@ -618,7 +618,7 @@ img {
 .lang-btn{
   appearance: none;
   background: transparent;
-  color: var(--title-color);
+  color: var(#000);
   border: 1px solid var(--first-color);
   border-radius: .5rem;
   padding: .32rem .7rem;      /* consistent size */
