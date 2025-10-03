@@ -455,8 +455,26 @@ img {
   color: var(--first-color-alt);
   margin-bottom: var(--mb-4);
 }
-.footer__social {
-  margin-bottom: var(--mb-4);
+.footer__social{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem;
+}
+
+@media (max-width: 520px){
+  .footer__social{
+    flex-direction: column;   /* stack vertically */
+    align-items: center;
+    gap: .5rem;
+  }
+  .footer__social .footer__icon{
+    display: inline-flex;     /* nicer tap targets */
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .footer__icon {
   font-size: 1.5rem;
