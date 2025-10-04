@@ -647,4 +647,24 @@ img {
 /* Safety: ensure header sits above the slide menu on mobile */
 .l-header{ z-index: var(--z-fixed); }
 
+/* Consent banner */
+.consent{
+  position: fixed; left: 1rem; right: 1rem; bottom: 1rem;
+  z-index: var(--z-fixed);
+  background: var(--second-color);
+  color: var(--title-color);
+  border: 1px solid var(--first-color);
+  border-radius: .75rem; padding: .9rem 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  display: none; gap: .75rem; align-items: center; justify-content: space-between;
+}
+.consent__actions{ display:flex; gap:.5rem; flex-wrap:wrap; }
+.button.button--ghost{
+  background: transparent; border: 1px solid var(--first-color); color: var(--title-color);
+}
+@media (max-width:520px){
+  .consent{ left:.75rem; right:.75rem; padding:.8rem .9rem; }
+  .consent__actions{ width:100%; justify-content:flex-end; }
+}
+.consent.show{ display:flex; }
 
