@@ -44,14 +44,11 @@
 
       <meta name="google-site-verification" content="9bTESc71dBBBhsUFEwG7Qe8Zpd50SYimgcSsMnC8vEI" />
         
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-33X53KGMTE"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){ dataLayer.push(arguments); }
-          gtag('js', new Date());
-          gtag('config', 'G-XXXXXXX', { send_page_view: false }); // we'll send page_view manually
-        </script>
+    <script>
+        window.GA_MEASUREMENT_ID = 'G-33X53KGMTE'; /* <- your GA4 ID */
+    </script>
         
+                
     </head>
 
     <body>
@@ -466,6 +463,18 @@
                 </p>
             </footer>
 
+            <!-- Consent banner -->
+            <div class="consent" id="consent-banner" role="dialog" aria-live="polite">
+              <p class="consent__text" data-i18n="consent.text">
+                We use cookies for analytics to understand traffic. Do you consent?
+              </p>
+              <div class="consent__actions">
+                <button id="consent-accept" class="button" data-i18n="consent.accept">Accept</button>
+                <button id="consent-decline" class="button button--ghost" data-i18n="consent.decline">Decline</button>
+              </div>
+            </div>
+
+
         <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>
 
@@ -479,6 +488,7 @@
 
     </body>
 </html>
+
 
 
 
