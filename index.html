@@ -45,8 +45,23 @@
       <meta name="google-site-verification" content="9bTESc71dBBBhsUFEwG7Qe8Zpd50SYimgcSsMnC8vEI" />
         
     <script>
-        window.GA_MEASUREMENT_ID = 'G-33X53KGMTE'; /* <- your GA4 ID */
+      /* GA4 – strict global opt-in */
+      window.GA_MEASUREMENT_ID = 'G-33X53KGMTE';   /* your GA4 ID */
+    
+      // gtag bootstrap for Consent Mode (no GA library yet)
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+    
+      // Deny everywhere by default; GA will be loaded only after Accept
+      gtag('consent','default',{
+        ad_storage:'denied',
+        ad_user_data:'denied',
+        ad_personalization:'denied',
+        analytics_storage:'denied',
+        wait_for_update:500
+      });
     </script>
+
         
                 
     </head>
@@ -488,6 +503,7 @@
 
     </body>
 </html>
+
 
 
 
