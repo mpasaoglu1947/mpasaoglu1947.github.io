@@ -36,6 +36,11 @@ const I18N = {
     "pubs.inpub":"In Publication Phase",
     "pubs.conf":"Conference",
 
+    "consent.text":"We use cookies for analytics to understand traffic. Do you consent?",
+    "consent.accept":"Accept",
+    "consent.decline":"Decline",
+    
+
     /* contact buttons */
     "contact.email":"Email","contact.linkedin":"LinkedIn","contact.orcid":"ORCID","contact.github":"GitHub"
   },
@@ -76,6 +81,11 @@ const I18N = {
     "pubs.inpub":"Yayın sürecinde",
     "pubs.conf":"Konferans",
 
+  
+    "consent.text":"Trafiği anlamak için analitik çerezleri kullanıyoruz. Onaylıyor musunuz?",
+    "consent.accept":"Kabul et",
+    "consent.decline":"Reddet",
+
     "footer.rights":"Tüm hakları saklıdır",
 
     /* contact buttons */
@@ -101,3 +111,4 @@ document.addEventListener('DOMContentLoaded', ()=>{
     b.addEventListener('click', ()=> setLang(b.dataset.lang));
   });
 });
+
