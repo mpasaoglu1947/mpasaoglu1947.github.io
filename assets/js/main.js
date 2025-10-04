@@ -85,60 +85,78 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 })();
 
-// --- Consent + GA4 lazy loader ---
-(function(){
-  const KEY = 'ga_consent';            // 'granted' | 'denied'
-  const banner = document.getElementById('consent-banner');
-  const acceptBtn = document.getElementById('consent-accept');
-  const declineBtn = document.getElementById('consent-decline');
+// ---- Global opt-in: load GA only after Accept ----
+(function () {
+  const KEY = 'ga_consent';                         // 'granted' | 'denied'
+  const banner  = document.getElementById('consent-banner');
+  const accept  = document.getElementById('consent-accept');
+  const decline = document.getElementById('consent-decline');
+
+  function show(){ banner?.classList.add('show'); }
+  function hide(){ banner?.classList.remove('show'); }
+
+  function sendPV(){
+    if (!window.gtag) return;
+    gtag('event','page_view',{
+      page_title: document.title,
+      page_location: location.href,
+      page_path: location.pathname + location.search + location.hash
+    });
+  }
 
   function loadGA(){
     if (window.GA_LOADED || !window.GA_MEASUREMENT_ID) return;
-    // queue
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function(){ dataLayer.push(arguments); };
-    gtag('js', new Date());
-    gtag('config', window.GA_MEASUREMENT_ID, { send_page_view: false });
-
-    // script
+    // Load GA library now
     const s = document.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_MEASUREMENT_ID;
     document.head.appendChild(s);
-    window.GA_LOADED = true;
 
-    // send initial page_view once loaded (we also guard for immediate availability)
-    const sendPV = () => {
-      if (!window.gtag) return;
-      gtag('event', 'page_view', {
-        page_title: document.title,
-        page_location: location.href,
-        page_path: location.pathname + location.search + location.hash
-      });
-    };
-    // try now and again after a tick
-    sendPV(); setTimeout(sendPV, 600);
+    gtag('js', new Date());
+    // we control page_view manually (hash navigation)
+    gtag('config', window.GA_MEASUREMENT_ID, { send_page_view: false });
+
+    window.GA_LOADED = true;
+    // initial page view after lib is ready
+    setTimeout(sendPV, 600);
   }
 
-  function hideBanner(){ banner && banner.classList.remove('show'); }
-  function showBanner(){ banner && banner.classList.add('show'); }
-
+  // Persisted choice?
   const saved = localStorage.getItem(KEY);
-  if (saved === 'granted'){ loadGA(); }
-  else if (saved !== 'denied'){ showBanner(); }
+  if (saved === 'granted') {
+    // user accepted previously
+    gtag('consent','update',{ analytics_storage:'granted',
+                              ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied' });
+    loadGA();
+  } else if (saved === 'denied') {
+    // user declined previously — keep denied, never load GA
+    gtag('consent','update',{ analytics_storage:'denied',
+                              ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied' });
+  } else {
+    // no decision yet → show banner
+    show();
+  }
 
-  acceptBtn && acceptBtn.addEventListener('click', ()=>{
-    localStorage.setItem(KEY, 'granted');
-    hideBanner(); loadGA();
+  accept?.addEventListener('click', ()=>{
+    localStorage.setItem(KEY,'granted');
+    hide();
+    gtag('consent','update',{ analytics_storage:'granted',
+                              ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied' });
+    loadGA();
   });
 
-  declineBtn && declineBtn.addEventListener('click', ()=>{
-    localStorage.setItem(KEY, 'denied');
-    hideBanner(); // GA not loaded
+  decline?.addEventListener('click', ()=>{
+    localStorage.setItem(KEY,'denied');
+    hide();
+    gtag('consent','update',{ analytics_storage:'denied',
+                              ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied' });
+    // do not load GA
   });
 
-  // If you already have hashchange tracking elsewhere, it will kick in after GA loads.
+  // Count section changes (only works after GA loads)
+  window.addEventListener('hashchange', sendPV);
 })();
+
 
 
 
@@ -146,5 +164,6 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
 
 
