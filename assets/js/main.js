@@ -60,7 +60,35 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// ---- GA4 page views for hash-based navigation ----
+(function () {
+  function sendPageView() {
+    if (!window.gtag) return;
+    gtag('event', 'page_view', {
+      page_title: document.title,
+      page_location: location.href,
+      page_path: location.pathname + location.search + location.hash
+    });
+  }
+
+  // initial load
+  sendPageView();
+
+  // when user navigates between sections (#home, #about, ...)
+  window.addEventListener('hashchange', sendPageView);
+
+  // (optional) track language switch clicks
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (window.gtag) gtag('event', 'language_change', { lang: btn.dataset.lang });
+    });
+  });
+})();
+
+
+
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
