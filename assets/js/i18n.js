@@ -19,12 +19,11 @@ const I18N = {
     /* projects (work cards) */
     "work.styl.title":"Stylization & Face Recognition",
     "work.styl.desc":"Introduced <strong>Automatic Partial Stylization (APS)</strong>—selectively stylizes regions to test robustness, showing even partial stylization can fool SOTA face networks.",
-    "work.edges.title":"Semi-Supervised Edge Optimizer",
-    "work.edges.desc":"Fusing RGB & depth cues to generate a semi-supervised edge detection module.",
+    "work.edges.title":"Depth-Guided Hybrid Edge Detection: A Modular and Efficient Framework for Geometry-Aware Visual Boundary Enhancement.",
+    "work.edges.desc":"Fusing RGB & depth cues to generate an Efficient Framework for Geometry-Aware Visual Boundary Enhancement edge detection modular.",
     "work.recsys.title":"Optimizing Recommendation Systems",
     "work.recsys.desc":"Fusion of KNN, SVD, and XGBoost for enhanced recommendation performance.",
     "work.midas.title":"Panoramic Image Stitching",
-    "work.midas.desc":"Using MiDaS depth maps to build seamless panoramic reconstructions.",
     "work.hairless.title":"Hairless Image Preprocessing for Accurate Skin Lesion Detection and Segmentation",
     "work.hairless.desc":"Preprocessing pipeline removing hair artifacts in dermoscopy to boost lesion segmentation & classification accuracy.",
     "work.gan.title":"A Hybrid Conditional GAN Design for Image-to-Image",
@@ -64,12 +63,11 @@ const I18N = {
     /* projects (work cards) */
     "work.styl.title":"Stilizasyon & Yüz Tanıma",
     "work.styl.desc":"Dayanıklılığı ölçmek için bölgeleri seçerek stilize eden <strong>Otomatik Kısmi Stilizasyon (APS)</strong> yöntemini sunduk; kısmi stilizasyonun bile SOTA ağları yanıltabildiğini gösterdik.",
-    "work.edges.title":"Yarı Denetimli Kenar İyileştirici",
-    "work.edges.desc":"RGB ve derinlik ipuçlarını birleştirerek yarı denetimli kenar tespiti modülü.",
+    "work.edges.title":"Derinlik Rehberli Hibrit Kenar Algılama: Geometri Farkındalıklı Görsel Sınır Geliştirme için Modüler ve Verimli Bir Çerçeve",
+    "work.edges.desc":"RGB ve derinlik ipuçlarını birleştirerek, geometri farkındalıklı görsel sınır geliştirme için verimli ve modüler bir kenar algılama çerçevesi oluşturma.",
     "work.recsys.title":"Öneri Sistemlerinin Optimizasyonu",
     "work.recsys.desc":"KNN, SVD ve XGBoost birleşimiyle daha yüksek öneri performansı.",
     "work.midas.title":"Panoramik Görüntü Birleştirme",
-    "work.midas.desc":"MiDaS derinlik haritalarıyla kesintisiz panorama üretimi.",
     "work.hairless.title":"Doğru Cilt Lezyonu Tespiti ve Segmentasyonu için Tüylerden Arındırılmış Görüntü Ön İşleme",
     "work.hairless.desc":"Dermatoskopi görüntülerindeki kıl artefaktlarını temizleyerek leke segmentasyonu ve sınıflandırmasını iyileştirir.",
     "work.gan.title":"A Hybrid Conditional GAN Design for Image-to-Image",
@@ -111,4 +109,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
     b.addEventListener('click', ()=> setLang(b.dataset.lang));
   });
 });
+
 
