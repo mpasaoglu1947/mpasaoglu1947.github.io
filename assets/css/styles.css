@@ -607,12 +607,10 @@ img {
 
 /* Green Published Badge */
 .pub__badge--published {
-  background-color: #3cb371; /* Medium Sea Green */
-  color: #fff;
-  border-radius: 6px;
-  padding: 3px 8px;
-  font-size: 0.85rem;
-  font-weight: 600;
+  background: rgba(0, 180, 80, .15); /* soft green background */
+  color: #00b450;                    /* strong green text */
+}
+
 }
 
 /* Language switch: consistent look on all screens */
