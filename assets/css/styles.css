@@ -605,6 +605,15 @@ img {
   }
 }
 
+/* Green Published Badge */
+.pub__badge--published {
+  background-color: #3cb371; /* Medium Sea Green */
+  color: #fff;
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
 
 /* Language switch: consistent look on all screens */
 .lang-switch{
